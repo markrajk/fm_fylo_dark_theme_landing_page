@@ -4,12 +4,14 @@ import theme from '@/styles/theme'
 
 import { Layout } from '@/components'
 
+
+
 export default function MyApp({ Component, pageProps }) {
 
   return <>
   <GlobalStyle />
   <ThemeProvider theme={theme}>
-    <Layout>
+  <Layout>
     <Component {...pageProps} />
     </Layout>
   </ThemeProvider>

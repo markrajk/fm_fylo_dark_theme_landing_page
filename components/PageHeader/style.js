@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import respond from '@/styles/respond'
 
 export const Nav = styled.nav`
     display: flex;
@@ -19,5 +20,9 @@ export const NavList = styled.ul`
 `
 
 export const NavItem = styled.li`
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.color.white};
+
+    ${respond.md`
+        color: ${({ theme }) => theme.color.red};
+    `}
 `

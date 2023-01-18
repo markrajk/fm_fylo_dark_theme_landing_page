@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 const Logo = () => {
   return (
-    <Link href="#">
-        <Image width={80} height={24} src={'images/logo.svg'} />
+    <Link href="/">
+        <Image width={80} height={24} src={'images/logo.svg'} alt="Fylo app logo" />
     </Link>
   )
 }

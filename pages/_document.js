@@ -1,7 +1,7 @@
 
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-// import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from 'next/document'
 // import { PageHeader } from '@/components'
 
 export default class MyDocument extends Document {
@@ -31,17 +31,21 @@ export default class MyDocument extends Document {
     }
   }
 
-  // render() {
-  //   return (
-  //     <Html lang="en">
-  //       <Head />
-  //       <body>
-  //         <div>TEST</div>
-  //         <PageHeader />
-  //         <Main />
-  //         <NextScript />
-  //       </body>
-  //     </Html>
-  //   )
-  // }
+  render() {
+    return (
+        <Html lang="en">
+            <Head>
+              <link rel="icon" href="/images/favicon-32x32.png" />
+              <link rel="preconnect" href="https://fonts.googleapis.com"/>
+              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+              <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"/>
+            </Head>
+            <body>
+                <Main />
+                <NextScript />
+            </body>
+        </Html>
+    );
+}
+
 }
