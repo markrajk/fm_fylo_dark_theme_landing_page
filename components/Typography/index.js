@@ -2,15 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Tags from './style'
 
-const Typography = ({ children, style, tag }) => {
-
-  console.log(Tags[tag], tag, 'TAGS')
+const Typography = ({ children, style, tag, font }) => {
 
   const Tag = Tags[tag];
 
   return (
-    <Tag style={style}>{children}</Tag>
-    // <h1>TEST</h1>
+    <Tag style={style} font={font}>{children}</Tag>
   )
 }
 
@@ -24,7 +21,8 @@ Typography.propTypes = {
     PropTypes.node
   ]).isRequired,
   style: PropTypes.object,
-  tag: PropTypes.string
+  tag: PropTypes.string,
+  font: PropTypes.string,
 }
 
 export default Typography

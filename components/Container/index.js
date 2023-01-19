@@ -1,9 +1,9 @@
 import React from 'react'
 import { Wrapper } from './style'
 
-const Container = ({children}) => {
+const Container = ({ children, style }) => {
   return (
-    <Wrapper>{children}</Wrapper>
+    <Wrapper style={style}>{children}</Wrapper>
   )
 }
 

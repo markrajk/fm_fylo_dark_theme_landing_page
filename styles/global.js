@@ -16,9 +16,11 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-size: 1rem;
-        background-color: ${theme.color.darkBlue};
-        font-family: ${theme.font.family.openSans};
+        background-color: ${theme.color.darkMain};
+        font-family: ${theme.font.family.body};
         color: ${theme.color.white};
+        line-height: 1.5;
+        font-weight: ${theme.font.weight.regular};
     }
 `
 

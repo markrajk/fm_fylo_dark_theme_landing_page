@@ -11,8 +11,8 @@ export default {
     },
     font: {
         family: {
-            raleway: '"Raleway", sans-serif',
-            openSans: '"Open Sans", sans-serif',
+            display: '"Raleway", sans-serif',
+            body: '"Open Sans", sans-serif',
         },
         size: {
             fs800: ['2.4em', '4em'],
