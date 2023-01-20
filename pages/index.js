@@ -1,7 +1,22 @@
 import Head from 'next/head'
-import { Hero, Typography as T } from '@/components'
 
-export default function Home() {
+import { Hero, Features, Info, Testimonials } from '@/components'
+
+export async function getStaticProps() {
+  const response = await fetch('http://localhost:3000/api/testimonials', {
+    method: 'GET',
+    credentials: 'same-origin'
+  });
+  const testimonials = await response.json();
+
+  return {
+    props: {
+      testimonials
+    }
+  }
+}
+
+export default function Home({ testimonials }) {
   return (
     <>
       <Head>
@@ -11,6 +26,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <Features />
+      <Info />
+      <Testimonials testimonials={testimonials} />
     </>
   )
 }

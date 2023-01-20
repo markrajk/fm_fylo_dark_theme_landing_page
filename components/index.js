@@ -1,6 +1,2 @@
-export { default as PageHeader } from './PageHeader'
-export { default as Layout } from './Layout'
-export { default as Container } from './Container'
-export { default as Logo } from './Logo'
-export { default as Typography } from './Typography'
-export { default as Hero } from './Hero'
+export * from './common'
+export * from './layout'

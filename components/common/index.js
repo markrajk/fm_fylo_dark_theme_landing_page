@@ -1,0 +1,7 @@
+export { default as Container } from './Container'
+export { default as Logo } from './Logo'
+export { default as Typography } from './Typography'
+export { default as Button } from './Button'
+export { default as Feature } from './Feature'
+export { default as Icon } from './Icon'
+export { default as Testimonial } from './Testimonial'
