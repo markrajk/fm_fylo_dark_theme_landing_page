@@ -8,6 +8,7 @@ const Testimonial = ({ testimonial }) => {
             <p>{testimonial.name}</p>
             <p>{testimonial.position}</p>
             <img src={testimonial.img} />
+            <p>test</p>
         </div>
     )
 }
