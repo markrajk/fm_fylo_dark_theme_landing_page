@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import respond from "@/styles/respond";
 
 export const Wrapper = styled.div`
     display: flex;
@@ -14,4 +15,8 @@ export const Article = styled.article`
     & h2 {
         margin-block-end: .8rem;
     }
+
+    ${respond.lg`
+        max-width: 35em;
+    `}
 `

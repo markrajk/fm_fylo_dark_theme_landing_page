@@ -6,6 +6,13 @@ export const Wrapper = styled.header`
         padding-block: 2.4em;
         width: 100%;
         background-color: ${theme.color.darkBlue};
+
+        ${respond.lg`
+            padding-block: 7.3em;
+
+            & .container {
+            }
+        `}
     `}
 `
 

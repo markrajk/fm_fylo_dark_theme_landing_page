@@ -3,7 +3,7 @@ import { Wrapper } from './style'
 
 const Container = ({ children, style }) => {
   return (
-    <Wrapper style={style}>{children}</Wrapper>
+    <Wrapper className='container' style={style}>{children}</Wrapper>
   )
 }
 

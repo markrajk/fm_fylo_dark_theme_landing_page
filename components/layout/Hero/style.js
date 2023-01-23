@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import respond from '@/styles/respond';
 
 export const Wrapper = styled.section`
     position: relative;
@@ -25,12 +26,22 @@ export const Wrapper = styled.section`
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
+
+            ${respond.lg`
+                background-image: url('/images/bg-curvy-desktop.svg');
+                height: 44.9em;
+            `}
         }
 
         & .bottom {
             width: 100%;
             height: 50%;
             background-color: ${({ theme }) => theme.color.darkMain};
+
+
+            ${respond.lg`
+                height: 0;
+            `}
         }
     }
 `
@@ -39,6 +50,10 @@ export const Grid = styled.div`
     ${({ theme }) => css`
         padding-block: 2.2em 12em;
 
+    ${respond.lg`
+        padding-block-start: 0;
+        padding-block-end: 15.8em;
+    `}
     `}
 `;
 
@@ -47,6 +62,12 @@ export const ImageWrapper = styled.div`
     position: relative;
     width: 100%;
     aspect-ratio: 720/534;
+
+    ${respond.lg`
+        margin-block-end: 3.6em;
+        max-width: 72em;
+        margin-inline: auto;
+    `}
 `
 
 export const Article = styled.article`
@@ -60,4 +81,17 @@ export const Article = styled.article`
         margin-block-end: 3.2rem;
         padding-inline: .5rem;
     }
+
+    ${respond.lg`
+        max-width: 73.4em;
+        margin-inline: auto;
+
+        & h1 {
+            margin-block-end: 3.2rem;
+        }
+
+        & > p {
+            padding-inline: 7.25rem;
+        }
+    `}
 `

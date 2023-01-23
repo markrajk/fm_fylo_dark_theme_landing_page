@@ -1,17 +1,16 @@
 import Head from 'next/head'
 
-import { Hero, Features, Info, Testimonials } from '@/components'
+import { getAllTestimonials } from '@/lib/testimonials'
+
+import { Hero, Features, Info, Testimonials, Contact, Footer } from '@/components'
+
 
 export async function getStaticProps() {
-  const response = await fetch('http://localhost:3000/api/testimonials', {
-    method: 'GET',
-    credentials: 'same-origin'
-  });
-  const testimonials = await response.json();
+  const { data, error } = await getAllTestimonials()
 
   return {
     props: {
-      testimonials
+      testimonials: data
     }
   }
 }
@@ -29,6 +28,8 @@ export default function Home({ testimonials }) {
       <Features />
       <Info />
       <Testimonials testimonials={testimonials} />
+      <Contact />
+      <Footer />
     </>
   )
 }

@@ -8,8 +8,8 @@ import { Wrapper, Nav, NavList, NavItem } from './style'
 const PageHeader = () => {
   return (
     <Wrapper>
-      <Container style={{ display: 'flex', justifyContent: 'space-between', paddingInline: '2.4em' }}>
-        <Logo />
+      <Container style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Logo responsive />
         <Nav>
           <NavList>
             <NavItem>

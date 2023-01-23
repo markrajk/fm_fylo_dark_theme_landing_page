@@ -19,7 +19,7 @@ const Hero = () => {
                         <T tag="textBodyHero">
                             Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
                         </T>
-                        <Button>Get Started</Button>
+                        <Button style={{ maxWidth: '24rem' }}>Get Started</Button>
                     </Article>
                 </Grid>
             </Container>

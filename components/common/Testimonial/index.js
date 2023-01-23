@@ -1,15 +1,27 @@
 import React from 'react'
+import Image from 'next/image'
 import PropTypes from 'prop-types'
+
+import { Typography as T } from '@/components'
+
+import { Wrapper, Info, ImgWrapper } from './style'
 
 const Testimonial = ({ testimonial }) => {
     return (
-        <div>
-            <p>{testimonial.testimonial}</p>
-            <p>{testimonial.name}</p>
+        <Wrapper>
+            <T tag="textBodySmall">{testimonial.testimonial}</T>
+            <Info>
+                <ImgWrapper>
+                    <Image src={testimonial.img} fill="true" alt={`${testimonial.name}'s profile image`} />
+                </ImgWrapper>
+                <T tag="textH5" as="p" font='regular' style={{ gridArea: 'name' }}>{testimonial.name}</T>
+                <T tag="textTag" font='regular' style={{ gridArea: 'position' }}>{testimonial.position}</T>
+            </Info>
+            {/* <p>{testimonial.name}</p>
             <p>{testimonial.position}</p>
             <img src={testimonial.img} />
-            <p>test</p>
-        </div>
+            <p>test</p> */}
+        </Wrapper>
     )
 }
 

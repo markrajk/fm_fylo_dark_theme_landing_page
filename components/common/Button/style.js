@@ -5,7 +5,7 @@ export const Wrapper = styled.button`
     position: relative;
     font-size: 1rem;
     height: 4.8em;
-    padding-inline: 8.1em;
+    padding-inline: 2rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +16,8 @@ export const Wrapper = styled.button`
     color: inherit;
     overflow: hidden;
     cursor: pointer;
+    white-space: nowrap;
+    width: 100%;
     
 
     & > *:first-child {

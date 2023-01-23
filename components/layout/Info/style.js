@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import respond from '@/styles/respond';
 
 export const Wrapper = styled.section`
     position: relative;
@@ -8,6 +9,16 @@ export const Grid = styled.div`
     ${({ theme }) => css`
         padding-block: 0 16em;
 
+        ${respond.lg`
+            padding-block: 0 17.9em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 5.7em;
+            align-items: center;
+            justify-content: start;
+            text-align: left;
+        `}
     `}
 
     & a {
@@ -46,19 +57,30 @@ export const ImageWrapper = styled.div`
     position: relative;
     width: 100%;
     aspect-ratio: 720/534;
+
+    ${respond.lg`
+        margin-block-end: 0;
+    `}
 `
 
 export const Article = styled.article`
     text-align: center;
 
     & h2 {
+        max-width: 40rem;
         margin-block-end: 1.6rem;
     }
 
     & > p {
         margin-block-end: 1.6rem;
         text-align: left;
+        max-width: 56rem;
     }
 
 
+    ${respond.lg`
+        & h2 {
+            text-align: left;
+        }
+    `}
 `
