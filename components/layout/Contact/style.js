@@ -1,6 +1,25 @@
 import styled from "styled-components";
+import respond from "@/styles/respond";
 
 export const Wrapper = styled.div`
+position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 17em;
+        background-color: ${({ theme }) => theme.color.darkGray};
+        z-index: -1;
+
+        ${respond.lg`
+            height: 11.6em;
+        `}
+    }
+`
+
+export const Content = styled.div`
     padding: 4em 2.8em;
     background-color: ${({ theme }) => theme.color.darkBlue};
     text-align: center;
@@ -13,16 +32,36 @@ export const Wrapper = styled.div`
         margin-block-end: 3.2rem;
     }
 
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 17em;
-        background-color: ${({ theme }) => theme.color.darkGray};
-        z-index: -1;
-    }
+    ${respond.lg`
+        padding: 4.2em 7.7em 2.2em;
+        margin-inline: auto;
+        max-width: 86.3rem;
+
+        & > p:first-of-type {
+            margin-inline: auto;
+            margin-block-end: 3.2rem;
+            max-width: 67.3rem;
+        }
+
+        & > div {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            gap: 2.9em;
+
+            & button {
+                width: 20rem!important;
+            }
+
+            & > div {
+                flex: 1;
+            }
+        }
+
+
+    `}
+
+    
 `
 
 export const Input = styled.input`

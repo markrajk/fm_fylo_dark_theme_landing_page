@@ -12,7 +12,7 @@ const Testimonial = ({ testimonial }) => {
             <T tag="textBodySmall">{testimonial.testimonial}</T>
             <Info>
                 <ImgWrapper>
-                    <Image src={testimonial.img} fill="true" alt={`${testimonial.name}'s profile image`} />
+                    <Image src={testimonial.img} fill="true" sizes="(min-width: 992px) 24px, 24px" alt={`${testimonial.name}'s profile image`} />
                 </ImgWrapper>
                 <T tag="textH5" as="p" font='regular' style={{ gridArea: 'name' }}>{testimonial.name}</T>
                 <T tag="textTag" font='regular' style={{ gridArea: 'position' }}>{testimonial.position}</T>

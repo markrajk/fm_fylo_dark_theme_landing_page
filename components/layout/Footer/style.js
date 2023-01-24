@@ -1,9 +1,15 @@
 import styled from "styled-components";
+import respond from "@/styles/respond";
 
 export const Wrapper = styled.footer`
     padding: 5rem .3em;
     padding-top: 8.3em;
     background-color: ${({ theme }) => theme.color.darkGray};
+
+    ${respond.lg`
+        padding: 5.3rem 0;
+        padding-top: 5.3rem;
+    `}
 `
 
 export const Content = styled.div`
@@ -22,6 +28,15 @@ export const Content = styled.div`
         margin-block-end: 3.5rem;
         grid-area: logo;
     }
+
+    ${respond.lg`
+        grid-template-columns: 38em auto auto auto auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+        'logo . . . .' 
+        'location info listOne listTwo social';
+        justify-content: space-between;
+    `}
 `
 
 export const InfoWrapper = styled.div`

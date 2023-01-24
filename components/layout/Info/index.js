@@ -22,7 +22,7 @@ const Hero = () => {
             <Container>
                 <Grid>
                     <ImageWrapper>
-                        <Image src="/images/illustration-stay-productive.png" fill alt="clip art" />
+                        <Image src="/images/illustration-stay-productive.png" fill="100%" sizes="(min-width: 992px) 72em, 100vw" alt="clip art" />
                     </ImageWrapper>
 
                     <div>

@@ -11,7 +11,7 @@ const Hero = () => {
             <Container>
                 <Grid>
                     <ImageWrapper>
-                        <Image src="/images/illustration-intro.png" fill alt="clip art" />
+                        <Image src="/images/illustration-intro.png" fill="100%" sizes="(min-width: 992px) 72em, 100vw" alt="clip art" priority />
                     </ImageWrapper>
 
                     <Article>

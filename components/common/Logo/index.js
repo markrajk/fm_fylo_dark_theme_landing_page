@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 
 const Logo = ({ width, height, responsive }) => {
-  if (responsive) {
+  if (responsive === "true") {
     width = '176'
     height = '52'
   }
@@ -20,13 +20,13 @@ const Logo = ({ width, height, responsive }) => {
 Logo.defaultProps = {
   width: '80',
   height: '24',
-  responsive: false
+  responsive: "false"
 }
 
 Logo.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
-  responsive: PropTypes.bool
+  responsive: PropTypes.string
 }
 
 export default Logo

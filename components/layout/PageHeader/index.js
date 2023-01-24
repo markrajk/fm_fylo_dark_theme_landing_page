@@ -9,7 +9,7 @@ const PageHeader = () => {
   return (
     <Wrapper>
       <Container style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Logo responsive />
+        <Logo responsive="true" />
         <Nav>
           <NavList>
             <NavItem>
