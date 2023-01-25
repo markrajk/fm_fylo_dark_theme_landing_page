@@ -8,10 +8,11 @@ import { Hero, Features, Info, Testimonials, Contact, Footer } from '@/component
 export async function getStaticProps() {
   let { data, error } = await getAllTestimonials()
 
+
   return {
     props: {
       testimonials: data,
-      fallback: false
+      fallback: true
     }
   }
 }
