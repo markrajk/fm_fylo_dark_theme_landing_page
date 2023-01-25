@@ -10,7 +10,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      testimonials: data || null
+      testimonials: data
     }
   }
 }
