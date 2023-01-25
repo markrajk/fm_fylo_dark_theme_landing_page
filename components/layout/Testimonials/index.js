@@ -16,7 +16,7 @@ const Testimonials = ({ testimonials }) => {
                     <Image src="/images/bg-quotes.png" fill="100%" sizes='(min-width: 992px) 6em, 2.5em' alt="image of quotes" />
                 </ImgWrapper>
                 {
-                    testimonials?.map((testimonial, index) => (
+                    testimonials && testimonials.length && testimonials.map((testimonial, index) => (
                         <Testimonial key={index} testimonial={testimonial} />
                     ))
                 }
