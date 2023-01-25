@@ -1,18 +1,18 @@
 import Head from 'next/head'
 
-import { getAllTestimonials } from '@/lib/testimonials'
+// import { getAllTestimonials } from '@/lib/testimonials'
+import { getAllTestimonials } from './api/testimonials'
 
 import { Hero, Features, Info, Testimonials, Contact, Footer } from '@/components'
 
 
 export async function getStaticProps() {
-  let { data, error } = await getAllTestimonials()
+  let data = getAllTestimonials()
 
 
   return {
     props: {
       testimonials: data,
-      fallback: true
     }
   }
 }
