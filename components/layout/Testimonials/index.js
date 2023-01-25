@@ -1,16 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import { useRouter } from 'next/router'
 
 import { Container, Testimonial } from '@/components'
 
 import { Wrapper, ImgWrapper } from './style'
 
 const Testimonials = ({ testimonials }) => {
-    const router = useRouter()
-
-    if (router.isFallback) return <div>Loading...</div>
 
     return (
         <Container>
