@@ -11,7 +11,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      testimonials: data,
+      testimonials: JSON.parse(JSON.stringify(data)),
       fallback: true
     }
   }
